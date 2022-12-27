@@ -13,6 +13,7 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0" />
     <PackageReference Include="System.AppContext" Version="4.3.0" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
+    <PackageReference Include="XAct.Core.PCL" Version="0.0.5014" />
   </ItemGroup>
 
   <ItemGroup>

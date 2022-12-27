@@ -6,7 +6,7 @@ namespace PNPA.Data
     public class DataContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Host=localhost;Database=bagsay-lahi;Username=postgres;Password=Password");
+            => optionsBuilder.UseNpgsql("Host=localhost;Database=bagsay-lahi;Username=postgres;Password=Admin");
 
         #region DbSet
         public virtual DbSet<User> Users { get; set; } = default!;
@@ -18,7 +18,7 @@ namespace PNPA.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasPostgresExtension("uuid-ossp").HasDefaultSchema("DEMS");
+            modelBuilder.HasPostgresExtension("uuid-ossp").HasDefaultSchema("bagsay-lahi");
 
             modelBuilder.Entity<User>(entity =>
             {
@@ -144,6 +144,7 @@ namespace PNPA.Data
                 entity.HasMany(d => d.PersonsInfo)
                    .WithOne(p => p.Rank);
             });
+
         }
     }
 }

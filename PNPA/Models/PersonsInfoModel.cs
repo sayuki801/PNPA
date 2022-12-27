@@ -1,4 +1,6 @@
-﻿namespace PNPA.Models
+﻿using PNPA.Data.Entities;
+
+namespace PNPA.Models
 {
     public class PersonsInfoModel
     {

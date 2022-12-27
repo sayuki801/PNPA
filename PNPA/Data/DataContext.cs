@@ -144,6 +144,7 @@ namespace PNPA.Data
                 entity.HasMany(d => d.PersonsInfo)
                    .WithOne(p => p.Rank);
             });
+
         }
     }
 }
